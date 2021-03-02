@@ -1,0 +1,60 @@
+{
+  "name": "@saas/cpttest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "es/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf es && tsc && babel components --out-dir es --extensions '.ts,.tsx'",
+    "watch": "tsc --watch",
+    "check-types": "tsc -p ./tsconfig.json",
+    "babel": "babel --watch  components --out-dir es --extensions '.ts,.tsx'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.13.8",
+    "@babel/runtime-corejs3": "^7.13.9",
+    "core-js": "^3.9.1",
+    "react": "^17.0.1",
+    "typescript": "^4.2.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.0",
+    "@babel/core": "^7.13.8",
+    "@babel/preset-env": "^7.13.8",
+    "@babel/preset-react": "^7.12.13",
+    "@babel/preset-typescript": "^7.13.0",
+    "@types/react": "^17.0.2"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "safari": "8"
+          },
+          "modules": false
+        }
+      ],
+      "@babel/preset-react",
+      [
+        "@babel/preset-typescript",
+        {
+          "isTSX": true,
+          "allExtensions": true
+        }
+      ]
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-transform-runtime",
+        {
+          "corejs": 3
+        }
+      ]
+    ]
+  },
+  "sideEffects": false
+}

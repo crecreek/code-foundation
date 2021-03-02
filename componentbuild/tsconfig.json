@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    // "outDir": "dist/",
+    "sourceMap": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "target": "es2017",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "skipDefaultLibCheck": true,
+    "jsx": "react",
+    "allowJs": false,
+    "checkJs": false,
+    "keyofStringsOnly": true,
+    "types": [],
+    "baseUrl": ".",
+    "paths": {},
+    "strictNullChecks": true,
+    "noEmit": true
+  },
+  "include": [
+    "components"
+  ],
+  "exclude": [
+  ],
+  "lib": [
+    "dom",
+    "es2015"
+  ]
+}
